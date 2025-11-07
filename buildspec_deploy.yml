@@ -19,7 +19,7 @@ phases:
     commands:
       - echo Build completed on `date`
       - mkdir -p ~/.ssh
-      - aws s3 cp s3://john-terraform-state-bucket-002/Nexuskeypair.pem ~/.ssh/id_rsa
+      - aws s3 cp s3://bassy-terraform-state-bucket99/Nexuskeypair.pem ~/.ssh/id_rsa
       - chmod 600 ~/.ssh/id_rsa
       - ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ubuntu@18.207.97.162 "sudo chown ubuntu:ubuntu /var/www/html"
       - echo Copying files to server...
