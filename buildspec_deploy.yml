@@ -21,6 +21,6 @@ phases:
       - mkdir -p ~/.ssh
       - aws s3 cp s3://bassy-terraform-state-bucket99/Nexuskeypair.pem ~/.ssh/id_rsa
       - chmod 600 ~/.ssh/id_rsa
-      - ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ubuntu@18.207.97.162 "sudo chown ubuntu:ubuntu /var/www/html"
+      - ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ubuntu@44.213.132.39 "sudo chown ubuntu:ubuntu /var/www/html"
       - echo Copying files to server...
-      - scp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -r build/* ubuntu@18.207.97.162:/var/www/html/
+      - scp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -r build/* ubuntu@44.213.132.39:/var/www/html/
